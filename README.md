@@ -4,4 +4,18 @@ In the past few weeks I have seen a overwhelming amount of people explaing their
 
 ## Complexity
 
-Amazon EKS is a complex system, and users need to have a good understanding of Kubernetes and its associated concepts to use it effectively. 
+Amazon EKS is a complex system, and users need to have a good understanding of Kubernetes and its associated concepts to use it effectively. I will be breaking down all of the main concepts that I feel are the most important being Helm, Pods, Kube ctl, Kube-proxy, Kubernetes API, Control plane, Worker nodes, Kubernets objects, Kubernetes controllers, Kubernetes namespace, Kubernetes labels, Kubernetes networking, Kubernetes storage, Kubernetes security. We will do a deep dive into all of them later but for now we are just going to give a summary of each component.
+
+![image](https://user-images.githubusercontent.com/106786020/226471115-309f7eea-244e-485c-b9b6-7f7d22df76b1.png)
+
+
+
+
+
+
+
+
+
+
+
+
