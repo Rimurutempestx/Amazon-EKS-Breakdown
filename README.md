@@ -24,6 +24,8 @@ Kube-proxy: Kube-proxy is a network proxy and load balancer that runs on each wo
 
 ![image](https://user-images.githubusercontent.com/106786020/226476632-d0c7cf03-8901-4308-8b0d-51fd01f611a2.png)
 
+Kubernetes API: 
+
 
 
 
