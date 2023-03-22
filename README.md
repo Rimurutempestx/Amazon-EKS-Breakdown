@@ -104,6 +104,10 @@ Implement Security Policies: You should implement security policies such as limi
 
 Use AWS Security Services: AWS provides a number of security services that can help you secure your EKS cluster, such as AWS Security Hub, AWS CloudTrail, and AWS Config. You should use these services to monitor your cluster for security events, detect and respond to security threats, and maintain compliance with security standards.
 
+# Networking
+
+
+
 
 
 
