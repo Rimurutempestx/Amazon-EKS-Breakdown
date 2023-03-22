@@ -67,6 +67,15 @@ Monitor and optimize: It's important to monitor the performance of your Amazon E
 
 # Cost
 
+The cost of using Amazon EKS (Elastic Kubernetes Service) can vary based on a number of factors, such as the size of the cluster, the number of nodes, the storage and networking requirements, and the region where the cluster is deployed.
+
+There are two main components to the cost of using EKS: the cost of the EKS control plane and the cost of the worker nodes. The control plane manages the Kubernetes master nodes and is charged at an hourly rate based on the region. The worker nodes are EC2 instances that run your application workloads and are charged based on the instance type, the number of nodes, and the usage time.
+
+In addition to these costs, you may also incur charges for other services that you use in conjunction with EKS, such as Elastic Load Balancers, Elastic Block Storage volumes, and other AWS services.
+
+# Scalability
+
+
 
 
 
