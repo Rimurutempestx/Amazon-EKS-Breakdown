@@ -75,9 +75,34 @@ In addition to these costs, you may also incur charges for other services that y
 
 # Scalability
 
+The scalability on EKS typically comes down to the way you want to scale and how fast and cost effectively you want to do it. I've worked closely with five different types that I use on a weekly basis.
+
+Horizontal Pod Autoscaling: EKS supports Kubernetes' Horizontal Pod Autoscaler (HPA), which automatically scales the number of pods in a deployment based on CPU utilization or other metrics. By setting up an HPA, you can ensure that your application can handle varying levels of traffic.
+
+Cluster Autoscaling: EKS also supports Cluster Autoscaler, which automatically adjusts the number of worker nodes in the cluster based on the demand for resources. This is particularly useful when you have unpredictable traffic patterns, and you don't want to overprovision your cluster.
+
+Manual Scaling: You can also manually scale your cluster by adding or removing worker nodes. This can be done through the EKS console, AWS CLI, or SDKs. Manual scaling is useful when you want more fine-grained control over your cluster's capacity.
+
+Spot Instances: EKS also supports using Spot instances, which are spare EC2 instances that are available at a lower cost than On-Demand instances. You can use Spot instances to scale your cluster and save costs, but you need to be prepared for the possibility of instances being terminated with short notice.
+
+Node Groups: Node Groups are a way to group worker nodes with similar characteristics, such as instance type or storage configuration. By using Node Groups, you can have more control over the scaling of specific subsets of your cluster.
 
 
+# Security
 
+Securing your Amazon EKS environment is essential for protecting sensitive data, ensuring business continuity, meeting compliance requirements, and mitigating cyber threats. By implementing a comprehensive security strategy, you can help ensure the safety and reliability of your EKS environment. Here are some of the best practices that I use for securing my environments.
+
+Secure the EKS Control Plane: The EKS control plane manages the Kubernetes master nodes, and it's critical to secure it to prevent unauthorized access. You can secure the control plane by using AWS Identity and Access Management (IAM) to manage access to EKS resources and by enabling encryption for communication between the control plane and worker nodes.
+
+Secure Worker Nodes: You should secure your worker nodes by ensuring that only authorized users and services can access them. You can use IAM roles to grant access to worker nodes, and you can also use AWS security groups and network ACLs to restrict inbound and outbound traffic to your worker nodes.
+
+Secure Kubernetes API Server: The Kubernetes API server exposes an HTTP API that enables users to interact with the cluster. You should secure the API server by using Transport Layer Security (TLS) encryption and by restricting access to authorized users.
+
+Use Network Security Best Practices: You should implement network security best practices such as using a Virtual Private Cloud (VPC) to isolate your EKS cluster from the public internet, using AWS security groups to control inbound and outbound traffic, and using VPC flow logs to monitor network traffic.
+
+Implement Security Policies: You should implement security policies such as limiting the use of privileged containers, using pod security policies to enforce security requirements for pods, and enabling auditing to monitor activity within the cluster.
+
+Use AWS Security Services: AWS provides a number of security services that can help you secure your EKS cluster, such as AWS Security Hub, AWS CloudTrail, and AWS Config. You should use these services to monitor your cluster for security events, detect and respond to security threats, and maintain compliance with security standards.
 
 
 
