@@ -47,6 +47,22 @@ Kubernetes security: Kubernetes security refers to the set of mechanisms used to
 
 # Setup
 
+Setting up Amazon EKS can be a difficult and time-consuming process, requiring expertise in infrastructure and networking. Setting up a effective EKS environment involves everal steps, including configuring the cluster, setting up networking and security, and deploying applications there are multiple steps to ensure proper setip of your EKS environment.
+
+Planning the architecture: Before setting up the cluster, it's important to plan the overall architecture of your application, including the number of nodes, the types of workloads, and the required networking and storage configurations. This way you can ensure that everything works cohesively and it makes it alot easier to take the proper steps in launching your EKS deployment.
+
+![image](https://user-images.githubusercontent.com/106786020/227004761-7128762b-17db-4286-a366-2d4c96a89dfb.png)
+
+Creating the cluster/clusters: You can create an Amazon EKS cluster using the AWS Management Console, AWS CLI, or AWS CloudFormation. It's important to configure the cluster with the appropriate settings, including the Kubernetes version, networking, and security policies. Everything does not have to be flawless on this end at first, but it acts as a good base to have a cluster to build around.
+
+Setup Networking: Amazon EKS supports a variety of networking solutions, including the Amazon VPC CNI, Calico, and Weave Net. It's important to choose a networking solution that meets your requirements and configure it appropriately. Typically you should have no trouble finding what suit your needs, I usually just refer to the AWS documentation.
+
+<img width="947" alt="image" src="https://user-images.githubusercontent.com/106786020/227005218-1b76858b-1225-48bd-8e04-d75a9e4e0ec7.png">
+
+Configure security:
+
+
+
 
 
 
