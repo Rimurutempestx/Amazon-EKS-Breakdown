@@ -110,7 +110,31 @@ Networking can be a complicated part of Amazon EKS, and users need to have a goo
 
 ![image](https://user-images.githubusercontent.com/106786020/227033080-d24d06df-a8ce-4fc5-9c48-ea52b81c4877.png)
 
+To start off with the concepts I am sure whoever is reading this is already familiar with the bascic types of networking. Things like VPC's, Subnets, Scurity groups, and Load balancing shouldn't have to be explained, so I will just stick with the core 3 networking type that pertain to EKS.
 
+Kube-proxy: kube-proxy is a Kubernetes networking component that runs on each worker node in the cluster. Its primary function is to provide a network proxy and load balancer for Kubernetes services running on the worker nodes.
+
+kube-proxy works by setting up a set of network rules on the worker node's operating system to forward incoming traffic to the appropriate pod in the cluster. It also manages the virtual IP address (VIP) assigned to the service, which allows clients to connect to the service without needing to know the IP addresses of the individual pods.
+
+kube-proxy operates in three different modes:
+
+1. User space mode: In this mode, kube-proxy runs as a userspace daemon on the worker node, and it uses iptables rules to forward traffic to the appropriate pod. This mode is less performant than other modes, but it can be used in environments where the kernel does not support the other modes.
+
+2. IPVS mode: In this mode, kube-proxy uses the Linux kernel's IPVS (IP Virtual Server) module to perform load balancing and service proxying. This mode is highly performant and scalable and is the recommended mode for EKS clusters running on Linux worker nodes.
+
+3. IPTables mode: In this mode, kube-proxy uses iptables rules to forward traffic to the appropriate pod. This mode is similar to user space mode, but it uses a more efficient implementation of iptables.
+
+Kube-dns service: kube-dns is a Kubernetes add-on service that provides name resolution for Kubernetes services using DNS. It is responsible for mapping Kubernetes service names to their corresponding IP addresses, which enables clients to connect to services using their names rather than their IP addresses.
+
+kube-dns is composed of two components: a DNS server and a DNS agent. The DNS server is responsible for serving DNS requests for the Kubernetes cluster, while the DNS agent runs as a pod on each worker node in the cluster and watches for changes to the Kubernetes service and pod configurations.
+
+When a Kubernetes service is created, kube-dns creates a DNS record for the service name in the cluster's DNS namespace. This record maps the service name to a cluster IP address assigned to the service. When a client sends a DNS query for the service name, the DNS server returns the IP address of one of the pods associated with the service. This enables clients to connect to the service without needing to know the IP addresses of individual pods.
+
+kube-dns is an essential component of the Kubernetes networking stack in EKS and plays a critical role in ensuring that services are accessible and discoverable within the cluster.
+
+Container networking: Container networking refers to the networking model used by Kubernetes to facilitate communication between containers running on different worker nodes within the cluster. Container networking is a crucial aspect of EKS since it enables Kubernetes to schedule and manage containers in a highly distributed and scalable manner. Container networking in EKS is implemented using a Container Network Interface (CNI) plugin. A CNI plugin is responsible for configuring the networking environment for containers running on a worker node. The CNI plugin creates network namespaces and virtual network interfaces for containers and sets up rules in the kernel's networking stack to enable communication between them.
+
+# Monitoring
 
 
 
