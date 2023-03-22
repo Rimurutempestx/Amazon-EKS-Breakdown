@@ -106,6 +106,12 @@ Use AWS Security Services: AWS provides a number of security services that can h
 
 # Networking
 
+Networking can be a complicated part of Amazon EKS, and users need to have a good understanding of Kubernetes networking concepts to configure it correctly. It is always best to break the concepts down separately.
+
+![image](https://user-images.githubusercontent.com/106786020/227033080-d24d06df-a8ce-4fc5-9c48-ea52b81c4877.png)
+
+
+
 
 
 
