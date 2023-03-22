@@ -35,9 +35,18 @@ Kubernetes Objects: Kubernetes objects are the fundamental building blocks used 
 
 Kubernetes controllers: Kubernetes controllers are components that are responsible for managing the state of Kubernetes objects, ensuring that the desired state is maintained and automatically correcting any deviations from that state. There are many diffrent types of Kubernetes controllers, so you will have to identify your needs before making any rash decisions.
 
-Kubernets namespace: Kubernetes namespace is a way to create a virtual cluster inside a Kubernetes cluster. A namespace provides a way to logically partition resources and create a virtual cluster, which helps to manage and organize resources within the cluster.
+Kubernetes namespace: Kubernetes namespace is a way to create a virtual cluster inside a Kubernetes cluster. A namespace provides a way to logically partition resources and create a virtual cluster, which helps to manage and organize resources within the cluster.
 
 Kubernetes labels: Kubernetes labels are key-value pairs that are used to organize and categorize resources within a Kubernetes cluster. Labels are metadata that can be attached to Kubernetes objects such as pods, services, and deployments, allowing you to easily select and manage related resources.
+
+Kubernets networking: Kubernetes networking refers to the set of mechanisms used to enable communication between the various components of a Kubernetes cluster. Kubernetes networking allows pods to communicate with each other and with other services in the cluster, and enables load balancing and traffic management for those services. Kubernetes networking in Amazon EKS is built on top of the Kubernetes networking model.
+
+Kubernetes storage: Kubernetes storage refers to the mechanisms used to provide persistent storage to containerized applications running in a Kubernetes cluster. Kubernetes storage allows for the persistent storage of data even if a pod or container is restarted, rescheduled, or terminated.
+
+Kubernetes security: Kubernetes security refers to the set of mechanisms used to secure the various components of a Kubernetes cluster, including the control plane, worker nodes, and applications running in the cluster.
+
+#### Setup
+
 
 
 
