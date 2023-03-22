@@ -59,7 +59,15 @@ Setup Networking: Amazon EKS supports a variety of networking solutions, includi
 
 <img width="947" alt="image" src="https://user-images.githubusercontent.com/106786020/227005218-1b76858b-1225-48bd-8e04-d75a9e4e0ec7.png">
 
-Configure security:
+Configure security: Kubernetes security in Amazon EKS involves securing the control plane, worker nodes, and applications running in the cluster. This can involve configuring RBAC, network policies, container security features, logging and monitoring, and compliance and governance frameworks. There will be a separate section for security later on for a deeper dive into it.
+
+Deploy applications: Once the cluster is set up, you can deploy applications using Kubernetes manifests or Helm charts. It's important to configure the appropriate resources, such as pods, services, and persistent volumes, and to test the application thoroughly to ensure it meets your requirements.
+
+Monitor and optimize: It's important to monitor the performance of your Amazon EKS environment and optimize it as needed to ensure optimal resource utilization and cost-effectiveness. This can involve using tools like AWS CloudWatch and Kubernetes Dashboard to track resource usage and identify opportunities for optimization. In a way this category can also fall under the same page as secuity, but it's still important to monitor your application at all times do to things like compute or storage failures or even the fact that AWS could update there services and you can find a better way to optimize performance.
+
+# Cost
+
+
 
 
 
