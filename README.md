@@ -168,6 +168,8 @@ High availability: Amazon EKS is designed to be highly available, with automatic
 
 Security: Amazon EKS provides several security features, including network isolation, encryption in transit and at rest, and integration with AWS Identity and Access Management (IAM) for authentication and authorization.
 
+# Integration 
+
 
 
 
