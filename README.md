@@ -136,6 +136,22 @@ Container networking: Container networking refers to the networking model used b
 
 # Monitoring
 
+ Monitoring and logging are essential parts of operating any Kubernetes cluster, and this can be challenging in Amazon EKS. EKS provides several monitoring capabilities to help you observe the health of your Kubernetes cluster and applications running on it. 
+ 
+ Metrics: EKS provides a set of pre-configured metrics that you can use to monitor your cluster, such as CPU and memory utilization, network traffic, and disk usage. These metrics can be viewed using Amazon CloudWatch.
+ 
+Logging: EKS supports logging of Kubernetes API server events, container logs, and node logs. These logs can be viewed using various tools, such as Amazon CloudWatch Logs and Elasticsearch.
+
+Tracing: EKS integrates with AWS X-Ray to enable tracing of requests through applications running on the cluster. This can help you identify performance issues and troubleshoot errors.
+
+Kubernetes Dashboard: EKS includes a Kubernetes Dashboard that provides a graphical user interface for monitoring and managing your cluster. The dashboard displays real-time information about your cluster, such as resource utilization and the status of Kubernetes objects.
+
+Prometheus: EKS supports Prometheus, a popular open-source monitoring system for Kubernetes. With Prometheus, you can collect custom metrics and perform more advanced monitoring and analysis.
+
+![image](https://user-images.githubusercontent.com/106786020/227364323-682d0932-f4b7-48d3-83f6-7236c405700c.png)
+
+# Maintenance 
+
 
 
 
