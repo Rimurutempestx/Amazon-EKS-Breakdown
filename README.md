@@ -184,6 +184,9 @@ AWS CloudFormation: Amazon EKS integrates with AWS CloudFormation, allowing user
 
 AWS CloudTrail: Amazon EKS integrates with AWS CloudTrail, allowing users to log and monitor all API activity for their Kubernetes clusters. This provides visibility into user activity and helps with compliance and auditing.
 
+# Support
+
+
 
 
 
