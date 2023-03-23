@@ -170,6 +170,19 @@ Security: Amazon EKS provides several security features, including network isola
 
 # Integration 
 
+Integrating Amazon EKS with other services can be complicated, and users need to have a good understanding of the integration process. There are some that you should definitely focus on more than others though like:
+
+Kubernetes API server: Amazon EKS integrates with the Kubernetes API server, providing a managed control plane for Kubernetes clusters. This allows users to manage their clusters using standard Kubernetes tools and APIs.
+
+AWS Identity and Access Management (IAM): Amazon EKS integrates with IAM to provide authentication and authorization for Kubernetes API calls. This allows users to control access to their Kubernetes clusters using IAM policies.
+
+AWS VPC networking: Amazon EKS integrates with Amazon VPC networking, allowing users to control network traffic to and from their Kubernetes clusters. This provides secure and isolated network access to Kubernetes applications.
+
+AWS Load Balancers: Amazon EKS integrates with AWS Load Balancers, allowing users to easily expose their Kubernetes applications to the internet. This provides scalability and availability for Kubernetes applications.
+
+AWS CloudFormation: Amazon EKS integrates with AWS CloudFormation, allowing users to create and manage their Kubernetes clusters using CloudFormation templates. This provides a way to automate the creation and management of Kubernetes clusters.
+
+AWS CloudTrail: Amazon EKS integrates with AWS CloudTrail, allowing users to log and monitor all API activity for their Kubernetes clusters. This provides visibility into user activity and helps with compliance and auditing.
 
 
 
