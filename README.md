@@ -186,6 +186,7 @@ AWS CloudTrail: Amazon EKS integrates with AWS CloudTrail, allowing users to log
 
 # Support
 
+Although Amazon provides support for EKS, getting help can be challenging, and users need to have a good understanding of the platform to troubleshoot issues effectively.
 
 
 
