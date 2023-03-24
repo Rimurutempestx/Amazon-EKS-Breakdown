@@ -188,6 +188,17 @@ AWS CloudTrail: Amazon EKS integrates with AWS CloudTrail, allowing users to log
 
 Although Amazon provides support for EKS, getting help can be challenging, and users need to have a good understanding of the platform to troubleshoot issues effectively.
 
+Node Groups: A node group is a set of Amazon EC2 instances that are used to run Kubernetes nodes. Node groups can be created and managed separately from the rest of the Kubernetes control plane, making it easier to scale your cluster as needed.
+
+Control Plane: The control plane is the set of Kubernetes components that manage the state of your cluster. Amazon EKS provides a managed control plane that automatically scales to meet the needs of your workload.
+
+Worker Nodes: Worker nodes are the Amazon EC2 instances that run your Kubernetes pods. These nodes are managed by the control plane and can be added or removed as needed to meet the demands of your workload.
+
+Cluster: The Kubernetes cluster is the set of nodes and control plane components that work together to manage your workload. Amazon EKS provides a managed Kubernetes control plane, but you are responsible for managing your worker nodes.
+
+Managed Node Groups: Managed node groups provide a simpler way to manage your worker nodes. You can create a managed node group with a few clicks in the AWS Management Console or using the AWS CLI or SDKs, and Amazon EKS takes care of the rest, including automatically updating the AMI and managing the lifecycle of the instances.
+
+Fargate: Amazon EKS also supports running Kubernetes pods on AWS Fargate, a serverless compute engine for containers. With Fargate, you don't need to manage any infrastructure, and you only pay for the resources your pods consume.
 
 
 
