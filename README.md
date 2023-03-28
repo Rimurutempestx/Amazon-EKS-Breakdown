@@ -206,7 +206,7 @@ Managed Node Groups: Managed node groups provide a simpler way to manage your wo
 
 Fargate: Amazon EKS also supports running Kubernetes pods on AWS Fargate, a serverless compute engine for containers. With Fargate, you don't need to manage any infrastructure, and you only pay for the resources your pods consume.
 
-# Section 2 EKS Roadmap
+# Section 2 EKS Roadmap:
 
 ![EKS Road Map PDF.pdf](https://github.com/Rimurutempestx/Amazon-EKS-Breakdown/files/11094172/EKS.Road.Map.PDF.pdf)
 
