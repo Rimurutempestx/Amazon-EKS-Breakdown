@@ -210,6 +210,12 @@ Fargate: Amazon EKS also supports running Kubernetes pods on AWS Fargate, a serv
 
 ![EKS Road Map PDF.pdf](https://github.com/Rimurutempestx/Amazon-EKS-Breakdown/files/11094172/EKS.Road.Map.PDF.pdf)
 
+In this section I will be explaining the best ways to learn Amazon EKS and the ways to incorporate each service with your Amazon EKS environment.
+
+### Deployment:
+
+
+
 
 
 
