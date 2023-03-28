@@ -214,11 +214,30 @@ In this section I will be explaining the best ways to learn Amazon EKS and the w
 
 ### Deployment: 
 
+![image](https://user-images.githubusercontent.com/106786020/228369548-1e1b03fc-5f1a-47b9-8b03-799b4249b5ef.png)
+
 Deployment in my opinon is the core aspect of Amazon EKS, it's like the cake itself. You need to have a cake in order to add frosting, sprinkles, and what not. So you always want to start with testing or visualizing a deployment first so its always great to have knowledge of deployment services first. The ones I would start with would be Kubernetes manifest, Container images, Kubernetes CLI, EKS console, CI/CD tools.
 
 Kubernetes manifest: Kubernetes manifest is a YAML file that describes the desired state of the resources in a Kubernetes cluster. It can include specifications for a variety of resources such as deployments, services, pods, config maps, and more. Its a great way to setup your resources in EKS. The Kubernetes manifest defines the desired configuration of the Kubernetes objects and their relationships to each other. It is used by Kubernetes to create and manage the resources in the cluster. The manifest also enables developers to define complex deployment scenarios, including scaling and updating applications. 
 
 you can create a Kubernetes manifest file locally on your computer and use the kubectl command-line tool to apply it to your cluster. You can also use tools like AWS CloudFormation or AWS CDK to manage your Kubernetes resources using manifests.
+
+Container images: 
+
+container images are self-contained, executable packages that include everything needed to run a piece of software, including the code, runtime, system tools, libraries, and settings. Container images are typically built using a Dockerfile, which specifies the dependencies and configuration needed to create the image. Once an image is built, it can be stored in a container registry, such as Amazon Elastic Container Registry (ECR), where it can be easily accessed and distributed to other users or teams. container images are used to deploy applications and services to the cluster. A container image can be specified in a Kubernetes manifest, and Kubernetes will use that image to create containers that run the application. When a container is created from an image, it runs in an isolated environment with its own file system, network, and resources, providing a consistent and reproducible environment for the application.
+
+Container images can also be used to implement a continuous delivery (CD) pipeline, allowing developers to quickly and easily build, test, and deploy code changes to a Kubernetes cluster.
+
+Kubernetes CLI: The kubectl command-line tool, which is a standard command-line interface for interacting with Kubernetes clusters. kubectl is used to deploy and manage applications and resources on a Kubernetes cluster running in Amazon EKS. With kubectl, you can perform a variety of tasks such as:
+
+- Creating, modifying, and deleting Kubernetes resources such as pods, services, and deployments. 
+- Scaling and updating applications running on the Kubernetes cluster.
+- Viewing and troubleshooting logs and events.
+- Managing Kubernetes configuration and secrets.
+
+To use kubectl with Amazon EKS, you need to first configure the tool with credentials to access your cluster. This can be done by running the aws eks update-kubeconfig command, which downloads the necessary authentication information and configures kubectl to use it. Once kubectl is configured, you can use it to interact with your Amazon EKS cluster as you would any other Kubernetes cluster.
+
+EKS console: 
 
 
 
