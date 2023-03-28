@@ -212,7 +212,13 @@ Fargate: Amazon EKS also supports running Kubernetes pods on AWS Fargate, a serv
 
 In this section I will be explaining the best ways to learn Amazon EKS and the ways to incorporate each service with your Amazon EKS environment.
 
-### Deployment:
+### Deployment: 
+
+Deployment in my opinon is the core aspect of Amazon EKS, it's like the cake itself. You need to have a cake in order to add frosting, sprinkles, and what not. So you always want to start with testing or visualizing a deployment first so its always great to have knowledge of deployment services first. The ones I would start with would be Kubernetes manifest, Container images, Kubernetes CLI, EKS console, CI/CD tools.
+
+Kubernetes manifest: Kubernetes manifest is a YAML file that describes the desired state of the resources in a Kubernetes cluster. It can include specifications for a variety of resources such as deployments, services, pods, config maps, and more. Its a great way to setup your resources in EKS. The Kubernetes manifest defines the desired configuration of the Kubernetes objects and their relationships to each other. It is used by Kubernetes to create and manage the resources in the cluster. The manifest also enables developers to define complex deployment scenarios, including scaling and updating applications. 
+
+you can create a Kubernetes manifest file locally on your computer and use the kubectl command-line tool to apply it to your cluster. You can also use tools like AWS CloudFormation or AWS CDK to manage your Kubernetes resources using manifests.
 
 
 
