@@ -251,7 +251,7 @@ Spinnaker: An open-source multi-cloud continuous delivery platform that can be u
 
 These CI/CD tools can be used to create and manage pipelines that automatically build, test, and deploy containerized applications to Kubernetes clusters running on Amazon EKS. By automating the deployment process, teams can accelerate the delivery of new features and updates while ensuring consistency and reliability across different environments.
 
-## Networking
+## Networking:
 
 
 
