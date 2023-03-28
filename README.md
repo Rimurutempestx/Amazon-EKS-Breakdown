@@ -237,7 +237,13 @@ Kubernetes CLI: The kubectl command-line tool, which is a standard command-line 
 
 To use kubectl with Amazon EKS, you need to first configure the tool with credentials to access your cluster. This can be done by running the aws eks update-kubeconfig command, which downloads the necessary authentication information and configures kubectl to use it. Once kubectl is configured, you can use it to interact with your Amazon EKS cluster as you would any other Kubernetes cluster.
 
-EKS console: 
+EKS console: The EKS Console in Amazon EKS is a web-based graphical user interface (GUI) for managing Kubernetes clusters running on the Amazon EKS service. It provides an intuitive interface for viewing and managing the resources in your cluster, including nodes, pods, services, and deployments. The EKS Console includes a dashboard that provides an overview of the state of your cluster, as well as details about the nodes and resources running in the cluster. It also provides a visual editor for creating and managing Kubernetes resources such as pods and services.
+
+While the EKS Console can be a useful tool for managing Kubernetes clusters, it is not a replacement for the kubectl CLI or other command-line tools. Some tasks may be easier to perform using the EKS Console, while others may be more efficient using the command-line tools. The EKS Console is intended to provide an additional option for managing your cluster, alongside the existing command-line tools and APIs.
+
+CI/CD tools:
+
+
 
 
 
