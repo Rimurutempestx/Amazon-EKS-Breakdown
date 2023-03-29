@@ -339,8 +339,7 @@ RBAC: Role-based access control (RBAC) is a key component of security for Amazon
 
 ![image](https://user-images.githubusercontent.com/106786020/228435374-b2090639-00eb-432c-8391-813e33c24650.png)
 
-
-
+Logging is an extremely important aspect across EKS because 9 times out of 10 there is going to be a lot going on in your EKS environment. Logging will ensure that you keep track and maintain important Information or API calls made inside your Amazon EKS environment to ensure that nothing funny goes under your nose as it pertains to your environment. Here are incredibly effective ways to help log changes made in your EKS environment: 
 
 
 
