@@ -271,6 +271,30 @@ Subnets: A subnet in Amazon Web Services (AWS) is a range of IP addresses in you
 - Load balancing: EKS integrates with AWS Elastic Load Balancing (ELB) to provide load balancing for Kubernetes services. You can configure your load balancer to use specific subnets to distribute traffic to your Kubernetes nodes or pods. By selecting specific subnets for your load balancer, you can control the flow of traffic between nodes or pods and other resources in the VPC.
 - PrivateLink: AWS PrivateLink allows you to securely access EKS services without using public IP addresses or requiring traffic to traverse the internet. PrivateLink can be configured to use specific subnets, allowing you to control which subnets can access EKS services.
 
+Security groups: Security groups in Amazon Web Services (AWS) are used to control traffic to and from your Amazon Elastic Kubernetes Service (EKS) resources, such as worker nodes and pods. Here are some ways security groups interact with EKS as it pertains to networking: 
+
+- Worker node security groups: When you create an EKS cluster, you specify the security groups that will be associated with the worker nodes launched in the specified subnets. These security groups control inbound and outbound traffic to the worker nodes, allowing you to define rules for traffic flow between the worker nodes and other resources in the VPC.
+- Pod security groups: EKS supports Kubernetes Network Policies which can be used to define rules for traffic flow between Kubernetes pods and other resources in the VPC. Pod security groups are a Kubernetes construct that allow you to specify security rules for pods based on their labels. These security rules are applied to the pods' network interfaces and can control inbound and outbound traffic to the pods.
+- Load balancer security groups: If you use an Elastic Load Balancer (ELB) to distribute traffic to your EKS resources, you can specify security groups that control inbound and outbound traffic to the load balancer. These security groups can control access to the load balancer from the internet or from specific resources in the VPC.
+- PrivateLink security groups: If you use AWS PrivateLink to securely access EKS services from within your VPC, you can associate security groups with the endpoint network interfaces. These security groups can control inbound and outbound traffic to the endpoint, allowing you to define rules for traffic flow between the endpoint and other resources in the VPC.
+
+ELB (Elastic Load Balancer): An ELB can be used to distribute traffic to resources in your Amazon Elastic Kubernetes Service (EKS) cluster. Here are some ways an ELB can interact with EKS as it pertains to networking:
+
+- Ingress controller: EKS supports Kubernetes ingress resources, which allow you to define rules for routing external traffic to your Kubernetes services. The Kubernetes ingress controller can be configured to use an ELB to distribute traffic to your services. This allows you to control traffic flow to your Kubernetes services from the internet or other resources outside your VPC.
+- Load balancing: When you configure an ELB to distribute traffic to your EKS resources, you can specify the target groups that contain the worker nodes or pods that will receive traffic. The ELB can use various algorithms to distribute traffic across the target group, such as round-robin or least connections. This allows you to scale your Kubernetes services horizontally by adding or removing worker nodes or pods as needed, and the ELB will automatically distribute traffic to the available resources.
+- Security: ELBs can be used to add an additional layer of security to your EKS resources. By configuring the ELB to use HTTPS or SSL/TLS, you can encrypt traffic between the ELB and your EKS resources. Additionally, you can configure security groups to control inbound and outbound traffic to the ELB, allowing you to define rules for traffic flow between the ELB and other resources in your VPC.
+- Auto Scaling: If you use Amazon EC2 Auto Scaling to automatically scale your EKS worker nodes based on demand, you can configure the ELB to work with Auto Scaling to distribute traffic to the new worker nodes as they are added. This allows you to scale your Kubernetes services dynamically based on demand, and the ELB will automatically distribute traffic to the available resources.
+
+Kubernetes networking: Kubernetes networking refers to the way in which Kubernetes manages networking between its various components, such as pods, services, and nodes. Kubernetes networking allows pods to communicate with each other, and also provides access to services from within and outside the cluster. There are several Kubernetes networking options that can be used in EKS, including:
+
+- Amazon VPC CNI (Container Networking Interface): This is the recommended networking option for EKS. The Amazon VPC CNI uses the AWS VPC networking to provide each pod with its own IP address and allows pods to communicate with each other and with resources in the VPC.
+- kubenet: This is a simple, basic networking option that can be used in EKS. It uses a bridge network to allow pods to communicate with each other and with services.
+- Calico: This is a popular networking option that provides advanced network policy and security features, such as network segmentation and policy enforcement.
+
+## Security:
+
+
+
 
 
 
