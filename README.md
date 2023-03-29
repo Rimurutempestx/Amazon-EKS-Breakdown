@@ -255,6 +255,7 @@ These CI/CD tools can be used to create and manage pipelines that automatically 
 
 <img width="947" alt="image" src="https://user-images.githubusercontent.com/106786020/228417636-19a6b257-d50e-404c-ab12-d502c36dcb3d.png">
 
+Networking is a key part of Amazon EKS it is essential that everything in the EKS environment has a home and a way to communicate with each other to make sure everything can flow properly.
 
 
 
