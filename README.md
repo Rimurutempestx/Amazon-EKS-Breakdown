@@ -264,7 +264,15 @@ VPC: A VPC is a virtual network that allows you to launch AWS resources in a log
 - Load balancing: Amazon EKS integrates with AWS Elastic Load Balancing (ELB) to provide load balancing for Kubernetes services. ELB can be used to distribute traffic across multiple Kubernetes nodes or pods, and can be configured to use a variety of load balancing algorithms.
 - Network policies: Amazon EKS supports Kubernetes network policies, which allow you to define rules for traffic flow within your VPC. Network policies can be used to control traffic between Kubernetes pods, as well as between pods and other resources in the VPC.
 
-Subnets: 
+Subnets: A subnet in Amazon Web Services (AWS) is a range of IP addresses in your Virtual Private Cloud (VPC) that can be used to launch resources like Amazon Elastic Kubernetes Service (EKS) nodes or other AWS services. As EKS is deployed inside a VPC, subnets are an important aspect of networking for EKS. Here are some ways subnets interact with EKS:
+
+- Node subnet: When you create an EKS cluster, you specify the subnets in which to launch the worker nodes that will run your Kubernetes workloads. EKS will automatically launch the worker nodes in the specified subnets, and the nodes will have IP addresses assigned from the subnet range. This allows your nodes to communicate with other resources in the same subnet, as well as other subnets in the VPC.
+- Network policies: EKS supports Kubernetes network policies, which are used to control traffic flow between pods and other resources in the VPC. You can apply network policies to specific subnets, allowing you to define rules for traffic flow between pods and other resources in the same subnet or in different subnets.
+- Load balancing: EKS integrates with AWS Elastic Load Balancing (ELB) to provide load balancing for Kubernetes services. You can configure your load balancer to use specific subnets to distribute traffic to your Kubernetes nodes or pods. By selecting specific subnets for your load balancer, you can control the flow of traffic between nodes or pods and other resources in the VPC.
+- PrivateLink: AWS PrivateLink allows you to securely access EKS services without using public IP addresses or requiring traffic to traverse the internet. PrivateLink can be configured to use specific subnets, allowing you to control which subnets can access EKS services.
+
+
+
 
 
 
