@@ -255,7 +255,18 @@ These CI/CD tools can be used to create and manage pipelines that automatically 
 
 <img width="947" alt="image" src="https://user-images.githubusercontent.com/106786020/228417636-19a6b257-d50e-404c-ab12-d502c36dcb3d.png">
 
-Networking is a key part of Amazon EKS it is essential that everything in the EKS environment has a home and a way to communicate with each other to make sure everything can flow properly.
+Networking is a key part of Amazon EKS it is essential that everything in the EKS environment has a home and a way to communicate with each other to make sure everything can flow properly. So here are the main key services to master for your EKS environment as it pertains to networking.
+
+VPC: A VPC is a virtual network that allows you to launch AWS resources in a logically isolated and secure environment. Amazon Elastic Kubernetes Service (EKS) is a fully managed Kubernetes service that makes it easy to deploy, manage, and scale containerized applications using Kubernetes on AWS. When it comes to networking, a VPC can interact with Amazon EKS in several ways:
+
+- Network topology: Amazon EKS is deployed inside a VPC. You can specify the subnets where your Kubernetes nodes and other resources will be launched, as well as the security groups that control traffic flow to and from those resources. This allows you to define your network topology and control the flow of traffic in and out of your Kubernetes clusters.
+- Service discovery: Amazon EKS integrates with AWS Cloud Map to provide service discovery for Kubernetes services. Cloud Map can discover and map services to VPC endpoints or IP addresses, which can be used to access services within the VPC or from external networks.
+- Load balancing: Amazon EKS integrates with AWS Elastic Load Balancing (ELB) to provide load balancing for Kubernetes services. ELB can be used to distribute traffic across multiple Kubernetes nodes or pods, and can be configured to use a variety of load balancing algorithms.
+- Network policies: Amazon EKS supports Kubernetes network policies, which allow you to define rules for traffic flow within your VPC. Network policies can be used to control traffic between Kubernetes pods, as well as between pods and other resources in the VPC.
+
+Subnets: 
+
+
 
 
 
