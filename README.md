@@ -293,6 +293,54 @@ Kubernetes networking: Kubernetes networking refers to the way in which Kubernet
 
 ## Security:
 
+![image](https://user-images.githubusercontent.com/106786020/228433933-b9eb2e35-6add-4bbe-876a-39419cb33c9c.png)
+
+Security is one of the most important parts of not just EKS but any AWS environment or service. Without security everything would pretty much go out of order due to malfunctions and malicious hacks. Here are some of the best ways to ensure that your Amazon EKS environment is secure: 
+
+VPC: A VPC in AWS can interact with Amazon EKS in several ways as it pertains to security. Here are some ways a VPC can interact with EKS to enhance security:
+
+- Network isolation: A VPC provides network isolation for your EKS resources, which can help improve security by limiting access to your EKS resources to only authorized resources. By configuring security groups and network access control lists (ACLs) in your VPC, you can control inbound and outbound traffic to your EKS resources.
+- Private subnets: You can configure private subnets within your VPC for your EKS worker nodes, which can help improve security by preventing direct access to your worker nodes from the internet. This can be accomplished by using a Network Address Translation (NAT) gateway or a bastion host to access the worker nodes from outside the VPC.
+- Encryption: You can use various encryption options in your VPC to improve security for your EKS resources. For example, you can encrypt data at rest using Amazon Elastic Block Store (EBS) encryption or Amazon S3 server-side encryption. You can also encrypt data in transit between your EKS resources using Transport Layer Security (TLS) or Secure Sockets Layer (SSL) protocols.
+- Identity and access management: You can use AWS Identity and Access Management (IAM) to control access to your EKS resources. This can include managing permissions for accessing EKS resources, creating IAM users and groups, and implementing multi-factor authentication (MFA) for added security.
+- Logging and monitoring: You can use AWS CloudTrail to log API calls to your EKS resources, allowing you to monitor and audit activity in your VPC. Additionally, you can use Amazon CloudWatch to monitor and analyze logs and metrics from your EKS resources, providing real-time insight into the health and security of your infrastructure.
+
+Monitoring and logging: Monitoring and logging are critical components of a secure and reliable infrastructure for Amazon Elastic Kubernetes Service (EKS). Here are some ways monitoring and logging interact with EKS as it pertains to security:
+
+- Security monitoring: Monitoring tools can detect suspicious activity or behavior in your EKS cluster, such as attempts to access resources that are not authorized or suspicious network traffic patterns. You can use monitoring tools such as Amazon CloudWatch or third-party solutions like Datadog or Prometheus to monitor your EKS cluster for potential security threats.
+- Incident response: In the event of a security incident, logs can be crucial for understanding the scope and impact of the incident, as well as for identifying the root cause. By collecting logs from your EKS cluster and other AWS services, you can quickly identify and respond to security incidents and reduce the impact of the incident.
+- Compliance: Compliance requirements often require logging and monitoring of infrastructure resources. By configuring logging and monitoring for your EKS cluster, you can demonstrate compliance with various security standards, such as the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act (HIPAA).
+- Alerting: Monitoring tools can be configured to generate alerts when specific security events or anomalies are detected. This can include alerts for failed login attempts, unauthorized access attempts, or other suspicious activity. These alerts can be used to trigger automated incident response workflows or to notify security teams for further investigation.
+- Auditing: Monitoring and logging tools can provide audit trails of activity in your EKS cluster, allowing you to track changes and troubleshoot issues. By maintaining a comprehensive audit trail, you can identify potential security issues before they become major problems and ensure that your EKS cluster is functioning as expected.
+
+Encryption: Encryption is an important component of security for Amazon Elastic Kubernetes Service (EKS) as it can help protect your data at rest and in transit. Here are some ways encryption interacts with EKS as it pertains to security: 
+
+- Data at rest encryption: Encryption can be used to protect data at rest in your EKS cluster by using Amazon Elastic Block Store (EBS) encryption or Amazon S3 server-side encryption. EBS encryption encrypts data on the EBS volumes attached to your EKS worker nodes, while S3 server-side encryption encrypts the data stored in S3 buckets used by your EKS applications. By encrypting data at rest, you can help prevent unauthorized access to your sensitive data in case of a data breach or other security incident.
+- Data in transit encryption: Encryption can also be used to protect data in transit between your EKS resources, such as worker nodes, load balancers, and other services. You can use Transport Layer Security (TLS) or Secure Sockets Layer (SSL) protocols to encrypt data in transit between your EKS resources. By using encryption, you can help prevent eavesdropping and other attacks on your network traffic.
+- Key management: To effectively use encryption in EKS, it is important to manage the encryption keys used to encrypt and decrypt data. AWS Key Management Service (KMS) provides a scalable key management solution that integrates with EKS and other AWS services. With KMS, you can create and manage encryption keys, configure access controls, and audit key usage. This helps you maintain control over your encryption keys and ensures that your data remains secure.
+- Compliance: Encryption is often a requirement for compliance with security standards such as HIPAA, PCI DSS, and others. By using encryption in your EKS cluster, you can help ensure compliance with these standards and protect sensitive data.
+
+IAM: AWS Identity and Access Management (IAM) is a key component of security for Amazon Elastic Kubernetes Service (EKS) as it enables you to control access to your EKS resources and manage permissions for users, groups, and applications. Here are some ways IAM interacts with EKS as it pertains to security:
+
+- Access control: IAM allows you to create policies that specify the permissions required to access your EKS resources. You can control who can create and manage EKS clusters, who can deploy applications to EKS, and who can access EKS API operations. By using IAM to manage access to your EKS resources, you can help prevent unauthorized access and ensure that users have the appropriate level of access to perform their tasks.
+- Resource permissions: IAM policies can also be used to control access to other AWS resources used by your EKS cluster, such as Amazon S3 buckets, Amazon RDS databases, and Amazon EC2 instances. By using IAM policies to manage resource permissions, you can help prevent unauthorized access and ensure that only authorized users can access sensitive data.
+- Service accounts: EKS uses Kubernetes service accounts to control access to Kubernetes resources within your cluster. IAM roles can be associated with these service accounts to control access to AWS resources. This allows you to control access to AWS resources used by your applications running on EKS, such as Amazon S3 or Amazon DynamoDB.
+- Audit logging: IAM can be used to generate audit logs of user activity within your EKS cluster. This can include actions such as creating or modifying IAM policies, creating or modifying EKS clusters, and accessing EKS resources. By reviewing these logs, you can identify potential security issues and ensure that users are following security best practices.
+- Multi-factor authentication (MFA): IAM supports MFA, which provides an extra layer of security to help prevent unauthorized access. By requiring MFA for IAM users who access EKS resources, you can help prevent unauthorized access and ensure that only authorized users can access sensitive data.
+
+RBAC: Role-based access control (RBAC) is a key component of security for Amazon Elastic Kubernetes Service (EKS) as it allows you to control access to your EKS resources based on roles and permissions. Here are some ways RBAC interacts with EKS as it pertains to security:
+
+- Resource permissions: RBAC allows you to define roles that specify the permissions required to access EKS resources. You can control who can create and manage EKS clusters, who can deploy applications to EKS, and who can access EKS API operations. By using RBAC to manage resource permissions, you can help prevent unauthorized access and ensure that users have the appropriate level of access to perform their tasks.
+- Cluster-level access: RBAC allows you to define roles that apply to the entire EKS cluster. This includes roles for managing the cluster, such as creating and modifying Kubernetes objects, as well as roles for managing access to AWS resources used by the cluster, such as Amazon S3 or Amazon DynamoDB. By using RBAC to manage cluster-level access, you can ensure that only authorized users can manage the cluster and access sensitive data.
+- Namespace-level access: RBAC also allows you to define roles that apply to specific namespaces within the EKS cluster. This allows you to control access to resources within namespaces, such as Kubernetes pods or services. By using RBAC to manage namespace-level access, you can help prevent unauthorized access and ensure that users have access only to the resources they need.
+- Audit logging: RBAC can be used to generate audit logs of user activity within your EKS cluster. This can include actions such as creating or modifying roles, creating or modifying Kubernetes objects, and accessing EKS resources. By reviewing these logs, you can identify potential security issues and ensure that users are following security best practices.
+
+## Logging:
+
+![image](https://user-images.githubusercontent.com/106786020/228435374-b2090639-00eb-432c-8391-813e33c24650.png)
+
+
+
 
 
 
